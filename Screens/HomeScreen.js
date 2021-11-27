@@ -38,21 +38,18 @@ const HomeScreen = ({ navigation }) => {
           temporaltemperatura = resultado.main;
           temporaloc = resultado.sys;
          
-          //Info de temperaturas
           let temporaltemp = [];
           temporaltemp.push(temporaltemperatura.temp);
           temporaltemp.push(temporaltemperatura.temp_max);
           temporaltemp.push(temporaltemperatura.temp_min);
 
-          //Info de coordenadas
+          let temporallocaliza = [];
+          temporallocaliza.push(temporaloc.country);
+          temporallocaliza.push(resultado.name);
+
           let temporalcoordenada = [];
           temporalcoordenada.push(temporalcoord.lon);
           temporalcoordenada.push(temporalcoord.lat);
-
-          //Infor de ciudad
-          let temporallocaliza = [];
-          temporallocaliza.push(temporaloc.country)
-          temporallocaliza.push(resultado.name)
 
           
           setLista(temporaltemp);
